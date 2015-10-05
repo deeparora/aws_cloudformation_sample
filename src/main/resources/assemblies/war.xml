@@ -1,0 +1,25 @@
+<assembly>
+    <id>final</id>
+    <!-- Specifies that our binary distribution is a zip package -->
+    <formats>
+        <format>war</format>
+    </formats>
+
+    <includeBaseDirectory>true</includeBaseDirectory>
+    <dependencySets>
+        <dependencySet>
+            <unpack>false</unpack>
+            <scope>runtime</scope>
+            <useProjectArtifact>true</useProjectArtifact>
+        </dependencySet>
+    </dependencySets>
+    <fileSets>
+        <fileSet>
+            <directory>${project.build.outputDirectory}</directory>
+            <outputDirectory>/</outputDirectory>
+            <excludes>
+                <exclude>resources/**</exclude>
+            </excludes>
+        </fileSet>
+    </fileSets>
+</assembly>

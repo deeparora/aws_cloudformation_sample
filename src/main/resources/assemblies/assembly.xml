@@ -1,0 +1,25 @@
+<assembly>
+    <id>bin</id>
+    <formats>
+        <format>zip</format>
+        <format>tar</format>
+        <format>tar.gz</format>
+    </formats>
+    <includeBaseDirectory>false</includeBaseDirectory>
+    <fileSets>
+        <fileSet>
+            <directory>${project.basedir}/src/main/resources/cloudformation</directory>
+            <outputDirectory/>
+            <includes>
+                <include>testing-infra.template</include>
+            </includes>
+        </fileSet>
+        <fileSet>
+            <directory>${project.build.directory}</directory>
+            <outputDirectory/>
+            <includes>
+                <include>*.war</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+</assembly>
