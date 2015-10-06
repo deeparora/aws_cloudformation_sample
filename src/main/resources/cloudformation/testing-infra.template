@@ -5,11 +5,6 @@
 
   "Parameters" : {
 
-    "KeyName": {
-      "Description" : "Name of an existing EC2 key pair to enable SSH access to the instances",
-      "Type": "String"
-    },
-
     "InstanceType" : {
       "Description" : "Web Server EC2 instance type",
       "Type" : "String",
@@ -116,7 +111,7 @@
         },
         "InstanceType": {"Ref": "InstanceType"},
         "SecurityGroups": [{"Ref": "WebServerGroup"}],
-        "KeyName": {"Ref": "KeyName"},
+        "KeyName": "carrot",
         "Tags": [
           {
             "Key": "Name",
